@@ -13,6 +13,7 @@ namespace CodeTask1
                 Console.WriteLine("select the process you need:");
                 Console.WriteLine("1.The avrage of to numbers. ");
                 Console.WriteLine("2. Check if a number is even or odd.");
+                Console.WriteLine("3. Find the smallest number.");
                 int option = int.Parse(Console.ReadLine());
                 switch (option)
                 {
@@ -49,6 +50,31 @@ namespace CodeTask1
                         }
 
                         break;
+                        case 3:
+                        Console.WriteLine("Enter the that you want");
+                        int n= int.Parse(Console.ReadLine());
+                        int[] num = new int[n];
+                        for (int i = 0; i < n; i++)
+                        {
+                            Console.WriteLine("enter number:");
+                            num[i] = int.Parse(Console.ReadLine());
+
+
+                        }
+
+                        int min = num[0];
+
+                        for (int i = 0; i < num[i]; i++)
+                        {
+                            if (num[i] < min)
+                            {
+                                min = num[i];
+                            }
+                        }
+                        Console.WriteLine("smallest is = " + min);
+                        Console.ReadLine();
+                        break;
+                }
             }
 
                
@@ -58,5 +84,5 @@ namespace CodeTask1
             }
         }
     }
-}
+
 
