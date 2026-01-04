@@ -12,7 +12,7 @@ namespace CodeTask1
                 Console.WriteLine("Welcome to system");
                 Console.WriteLine("select the process you need:");
                 Console.WriteLine("1.The avrage of to numbers. ");
-
+                Console.WriteLine("2. Check if a number is even or odd.");
                 int option = int.Parse(Console.ReadLine());
                 switch (option)
                 {
@@ -29,6 +29,26 @@ namespace CodeTask1
                 Console.WriteLine("the average is :" + average);
 
                 break;
+
+                case 2:
+
+                        Console.WriteLine("Enter the number");
+                        float number = float.Parse(Console.ReadLine());
+
+                        if (number % 2 == 0)
+                        {
+                            Console.WriteLine("even number");
+
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("odd number");
+
+
+                        }
+
+                        break;
             }
 
                
