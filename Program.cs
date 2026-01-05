@@ -11,27 +11,28 @@ namespace CodeTask1
 
                 Console.WriteLine("Welcome to system");
                 Console.WriteLine("select the process you need:");
-                Console.WriteLine("1.The avrage of to numbers. ");
+                Console.WriteLine("1.The average of to numbers. ");
                 Console.WriteLine("2. Check if a number is even or odd.");
                 Console.WriteLine("3. Find the smallest number.");
+                Console.WriteLine("task A.Multiplication table form")
                 int option = int.Parse(Console.ReadLine());
                 switch (option)
                 {
-                 case 1:
+                    case 1:
 
-                Console.WriteLine("Enter the first number");
-                float number1 = float.Parse(Console.ReadLine());
-                Console.WriteLine("Enter the second number");
-                float number2 = float.Parse(Console.ReadLine());
-                float result = number1 + number2;
-                Console.WriteLine(" the result is " + result);
-                float average = result / 2;
+                        Console.WriteLine("Enter the first number");
+                        float number1 = float.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter the second number");
+                        float number2 = float.Parse(Console.ReadLine());
+                        float result = number1 + number2;
+                        Console.WriteLine(" the result is " + result);
+                        float average = result / 2;
 
-                Console.WriteLine("the average is :" + average);
+                        Console.WriteLine("the average is :" + average);
 
-                break;
+                        break;
 
-                case 2:
+                    case 2:
 
                         Console.WriteLine("Enter the number");
                         float number = float.Parse(Console.ReadLine());
@@ -50,13 +51,15 @@ namespace CodeTask1
                         }
 
                         break;
-                        case 3:
+
+                    case 3:
+
                         Console.WriteLine("Enter the that you want");
-                        int n= int.Parse(Console.ReadLine());
+                        int n = int.Parse(Console.ReadLine());
                         int[] num = new int[n];
                         for (int i = 0; i < n; i++)
                         {
-                            Console.WriteLine("enter number:");
+                            Console.WriteLine("Enter number:");
                             num[i] = int.Parse(Console.ReadLine());
 
 
@@ -74,15 +77,43 @@ namespace CodeTask1
                         Console.WriteLine("smallest is = " + min);
                         Console.ReadLine();
                         break;
+
+
+                    case A:
+
+
+
+                        Console.WriteLine("enter the number");
+                        int x = int.Parse(Console.ReadLine());
+                        for (int i = 1; i <= x; i++)
+                        {
+                            for (int j = 1; j <= n; j++)
+                            {
+
+                                Console.WriteLine(i * j + "\t");
+                            }
+                            Console.WriteLine();
+                        }
+
                 }
-            }
 
-               
-
-            
-            
             }
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
