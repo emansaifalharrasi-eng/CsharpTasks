@@ -131,7 +131,7 @@ namespace CodeTask1
                         Console.WriteLine("Enter any number");
 
                         int n6 = int.Parse(Console.ReadLine());
-                        int[] x = new int[n6];
+
 
                         bool IsPrime = true;
 
@@ -140,46 +140,56 @@ namespace CodeTask1
                             IsPrime = false;
                         }
                         else
+                        {
 
-                            for (int i = 2; i <n6; i++)
-
+                            for (int i = 2; i < n6; i++)
                             {
-
-                               
-                                
-
-
+                                if (n6 % i == 0)
+                                {
 
                                     IsPrime = false;
                                     break;
+
+
+
                                 }
                             }
+                        }
 
-                        Console.WriteLine("n6 is prime");
-
-
-
-
-                                else
-
+                        if (IsPrime)
                         {
 
-                            Console.WriteLine("n6 is not prime");
+
+
+                            Console.WriteLine(n6 + "is prime");
 
 
                         }
+
+                        else
+
+                        {
+
+                            Console.WriteLine(n6 + " is not prime");
+
+
+                        }
+
+
+
+
+
+
+
                         break;
-
-                   
-
 
 
                 }
-
-
             }
         }
     }
+}
+    
 
 
     
