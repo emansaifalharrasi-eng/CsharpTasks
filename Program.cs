@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.IO.Pipelines;
 
 namespace CodeTask1
 {
@@ -16,6 +17,10 @@ namespace CodeTask1
                 Console.WriteLine("3. Find the smallest number.");
                 Console.WriteLine("task A. Multiplication table form");
                 Console.WriteLine("task B. check duplicate number ");
+                Console.WriteLine("4. Count positive and Nagitive");
+                Console.WriteLine("6 .Find the prime number");
+
+
                 int option = int.Parse(Console.ReadLine());
                 switch (option)
                 {
@@ -68,7 +73,7 @@ namespace CodeTask1
 
                         int min = num[0];
 
-                        for (int i = 0; i < num[i]; i++)
+                        for (int i = 0; i < n; i++)
                         {
                             if (num[i] < min)
                             {
@@ -80,66 +85,104 @@ namespace CodeTask1
                         break;
 
 
-                    case A:
+                    case 4:
 
 
 
-                        Console.WriteLine("enter the number");
-                        int x = int.Parse(Console.ReadLine());
-                        for (int i = 1; i <= x; i++)
+                        Console.WriteLine("Enter how many number you want:");
+                        int n1 = int.Parse(Console.ReadLine());
+                        int[] arr = new int[n1];
+
+
+                        for (int i = 0; i < n1; i++)
                         {
-                            for (int j = 1; j <= n; j++)
+                            Console.WriteLine("Enter the number");
+                            arr[i] = int.Parse(Console.ReadLine());
+                        }
+
+                        int positive = 0;
+                        int negative = 0;
+
+                        for (int i = 0; i < n1; i++)
+                        {
+
+
+                            if (arr[i] > 0)
                             {
+                                positive = positive + 1;
+                                Console.WriteLine("positive number=" + positive);
 
-                                Console.WriteLine(i * j + "\t");
                             }
-                            Console.WriteLine();
-                        
-                            Case B:
-
-
-
-{
-                                Console.WriteLine("enter what you want");
-
-                                int n = int.Parse(Console.ReadLine());
-
-                                int[] arr = new int[n];
-                                for (int i = 0; i < n; i++)
-                                {
-                                    Console.WriteLine("enter a number");
-                                    arr[i] = int.Parse(Console.ReadLine());
-
-                                }
-                                Console.WriteLine("");
-                                bool isDuplicate = false;
-                                for (int i = 0; i < n; i++)
-                                {
-                                    for (int j = i + 1; j < n; j++)
-                                    {
-                                        isDuplicate = true;
-                                        break;
-                                    }
-
-
-                                }
-
-                                if (isDuplicate)
-                                {
-                                    Console.WriteLine("has duplicate");
-                                }
-                                else
-                                {
-                                    Console.WriteLine("No duplicate");
-                                }
-
+                            else
+                            {
+                                negative = negative + 1;
+                                Console.WriteLine("nagitive number" + negative);
 
 
                             }
                         }
+                        break;
+
+
+
+                    case 6:
+
+
+                        Console.WriteLine("Enter any number");
+
+                        int n6 = int.Parse(Console.ReadLine());
+                        int[] x = new int[n6];
+
+                        bool IsPrime = true;
+
+                        if (n6 <= 1)
+                        {
+                            IsPrime = false;
+                        }
+                        else
+
+                            for (int i = 2; i <n6; i++)
+
+                            {
+
+                               
+                                
+
+
+
+                                    IsPrime = false;
+                                    break;
+                                }
+                            }
+
+                        Console.WriteLine("n6 is prime");
+
+
+
+
+                                else
+
+                        {
+
+                            Console.WriteLine("n6 is not prime");
+
+
+                        }
+                        break;
+
+                   
+
+
+
                 }
 
 
+            }
+        }
+    }
+
+
+    
 
 
 
@@ -147,15 +190,17 @@ namespace CodeTask1
 
 
 
+        
+
+    
+        
+    
 
 
 
 
 
-
-
-
-
+                 
 
 
 
